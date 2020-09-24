@@ -951,6 +951,11 @@ button.bg-default:focus {
     margin-top: 3rem !important;
 }
 
+.custom-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
 .mb-5 {
     margin-bottom: 3rem !important;
 }

@@ -7,7 +7,7 @@ addRows();
 function addRows() {
   var rk = 1;
   mydata.forEach((person) => {
-    newrow = getRow(rk, person.nombre, person.pts, 10);
+    newrow = getRow(rk, person.Nombre, person.Pts, 1, person.foto);
     insertRow(newrow);
     rk++;
   });
@@ -17,7 +17,7 @@ function insertRow(newR) {
   tableusers.innerHTML += "<tr>" + newR + "</tr>";
 }
 
-function getRow(ranking, name, pts, avance) {
+function getRow(ranking, name, pts, avance, foto) {
   const myrow =
     "<td>" +
     ranking +
@@ -25,7 +25,9 @@ function getRow(ranking, name, pts, avance) {
     '<th scope="row">' +
     '<div class="media align-items-center">' +
     '<a href="#" class="avatar rounded-circle mr-3">' +
-    '<img alt="Image placeholder" src="https://scontent.ffon1-1.fna.fbcdn.net/v/t1.0-9/79492108_10218402774595688_3370613617194958848_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_ohc=j0lKyI1sow8AX-fIz89&_nc_ht=scontent.ffon1-1.fna&oh=c5964c27614ae53fbb8c0645be278819&oe=5F8D84A1"/>' +
+    '<img alt="Image placeholder" src="' +
+    foto +
+    '"/>' +
     "</a>" +
     '<div class="media-body">' +
     '<span class="mb-0 text-sm"> ' +
@@ -40,9 +42,14 @@ function getRow(ranking, name, pts, avance) {
     '<div class="d-flex align-items-center">' +
     '<span class="mr-2">' +
     avance +
+    "/9" +
     "</span>" +
     '<div><div class="progress">' +
-    '<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>' +
+    '<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="' +
+    avance +
+    '" aria-valuemin="0" aria-valuemax="9" style="width:' +
+    avance * 10 +
+    '%"></div>' +
     "</div>" +
     "</div>" +
     "</div>" +
