@@ -7,7 +7,13 @@ addRows();
 function addRows() {
   var rk = 1;
   mydata.forEach((person) => {
-    newrow = getRow(rk, person.Nombre, person.Pts, 1, person.foto);
+    newrow = getRow(
+      rk,
+      person.Nombre,
+      person.Pts,
+      person.asistencia,
+      person.foto
+    );
     insertRow(newrow);
     rk++;
   });
