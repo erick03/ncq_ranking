@@ -53,7 +53,7 @@ function getRow(ranking, name, pts, avance, foto) {
     '<div><div class="progress">' +
     '<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="' +
     avance +
-    '" aria-valuemin="0" aria-valuemax="9" style="width:' +
+    '" aria-valuemin="0" aria-valuemax="10" style="width:' +
     avance * 10 +
     '%"></div>' +
     "</div>" +
