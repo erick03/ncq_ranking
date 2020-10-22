@@ -48,7 +48,7 @@ function getRow(ranking, name, pts, avance, foto) {
     '<div class="d-flex align-items-center">' +
     '<span class="mr-2">' +
     avance +
-    "/9" +
+    "/10" +
     "</span>" +
     '<div><div class="progress">' +
     '<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="' +
